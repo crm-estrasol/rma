@@ -12,7 +12,7 @@ _logger = logging.getLogger(__name__)
 
 class RepairOrder(models.Model):
     _inherit = "repair.order"
-
+    """
     def _create_invoices(self, group=False):
         grouped_invoices_vals = {}
         repairs = self.filtered(
@@ -176,7 +176,8 @@ class RepairOrder(models.Model):
 
         return dict(
             (repair.id, repair.invoice_id.id) for repair in repairs)
-
+    
+    """
 
 class RepairLine(models.Model):
     _inherit = "repair.line"
